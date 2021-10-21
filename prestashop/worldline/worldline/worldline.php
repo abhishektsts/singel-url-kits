@@ -10,7 +10,7 @@ class Worldline extends PaymentModule
 		$this->name = 'Worldline';
 		$this->tab = 'payments_gateways';
 		$this->version = '1.0';
-		$this->author = 'Techprocess';
+		$this->author = 'Worldline';
 		$this->need_instance = 0;
 		$this->controllers = array('request');
 		$this->is_eu_compatible = 1;

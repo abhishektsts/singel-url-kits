@@ -4,7 +4,7 @@
 	<displayName><![CDATA[Worldline]]></displayName>
 	<version><![CDATA[1.0]]></version>
 	<description><![CDATA[Worldline Online Payment Method]]></description>
-	<author><![CDATA[Techprocess]]></author>
+	<author><![CDATA[Worldline]]></author>
 	<tab><![CDATA[payments_gateways]]></tab>
 	<is_configurable>1</is_configurable>
 	<need_instance>0</need_instance>
