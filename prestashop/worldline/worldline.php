@@ -38,7 +38,7 @@ class Worldline extends PaymentModule
 		$this->registerHook('payment');
 		$this->registerHook('displayPaymentEU');
 		$this->registerHook('paymentReturn');
-		Configuration::updateValue('Worldline_checkout_label', 'Pay Using Worldline');
+		Configuration::updateValue('Worldline_checkout_label', 'Cards / UPI / Netbanking / Wallets');
 		return true;
 	}
 
@@ -60,7 +60,7 @@ class Worldline extends PaymentModule
 		$this->smarty->assign(array(
 			'this_path' => $this->_path,
 			'this_path_Worldline' => $this->_path,
-			'checkout_label' => $this->l((Configuration::get('Worldline_checkout_label')) ? Configuration::get('Worldline_checkout_label') : "Pay using Worldline"),
+			'checkout_label' => $this->l((Configuration::get('Worldline_checkout_label')) ? Configuration::get('Worldline_checkout_label') : "Cards / UPI / Netbanking / Wallets"),
 			'this_path_ssl' => Tools::getShopDomainSsl(true, true) . __PS_BASE_URI__ . 'modules/' . $this->name . '/'
 		));
 
@@ -73,7 +73,7 @@ class Worldline extends PaymentModule
 			return;
 
 		return array(
-			'cta_text' => $this->l((Configuration::get('Worldline_checkout_label')) ? Configuration::get('Worldline_checkout_label') : "Pay using Worldline"),
+			'cta_text' => $this->l((Configuration::get('Worldline_checkout_label')) ? Configuration::get('Worldline_checkout_label') : "Cards / UPI / Netbanking / Wallets"),
 			'logo' => Media::getMediaPath(dirname(__FILE__) . '/Worldline.png'),
 			'action' => $this->context->link->getModuleLink($this->name, 'request', array('confirm' => true), true)
 		);

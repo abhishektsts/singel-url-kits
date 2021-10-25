@@ -1,23 +1,20 @@
 
 
 {capture name=path}
-	<a href="{$link->getPageLink('order', true, NULL, "step=3")|escape:'htmlall':'UTF-8'}" rel="nofollow" title="{l s='Go back to the Checkout' mod='Worldline'}">
-	{l s='Checkout' mod='Worldline'}
-	{l s='Pay using Worldline' mod='Worldline'}
+	<a href="{$link->getPageLink('order', true, NULL, "step=3")|escape:'htmlall':'UTF-8'}" rel="nofollow" title="{l s='Go back to the Checkout' mod='Worldline'}">{l s='Checkout' mod='Worldline'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='Cards / UPI / Netbanking / Wallets' mod='Worldline'}
 {/capture}
 
 
 
 {assign var='current_step' value='payment'}
-
-{if isset($api_errors)}
-	<div class="errors">
+{include file="$tpl_dir./order-steps.tpl"}
+  {if isset($api_errors)}
+  <div class="errors">
 	{foreach $api_errors as $error}
 		<div class='alert alert-danger error'>{$error}</div>
 	{/foreach}
-    </div>
-{/if}
-
+ </div>
+ {/if}
 <P>Selected Payment Method : <b>{$checkout_label}</b></p>
 
 <form action="{$link->getModuleLink('Worldline', 'request', [], true)|escape:'htmlall':'UTF-8'}" method="post">
