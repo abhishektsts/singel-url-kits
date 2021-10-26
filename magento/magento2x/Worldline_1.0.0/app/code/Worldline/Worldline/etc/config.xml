@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<payment>
+			<worldlinepayment>
+				<active>1</active>
+				<model>Worldline\Worldline\Model\Payment\WorldlinePayment</model>
+				<order_status>pending</order_status>
+				<title>Cards / UPI / Netbanking / Wallets</title>
+				<allowspecific>0</allowspecific>
+				<group>offline</group>
+			</worldlinepayment>
+		</payment>
+	</default>
+</config>
